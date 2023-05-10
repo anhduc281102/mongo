@@ -15,7 +15,7 @@ app.get('/get/sensors', async (req, res) => {
         .connect(url, { useNewUrlParser: true })
         .catch(err => { console.log(err); })
     const database = client.db("devices")
-    const collection = database.collection("water_sensor")
+    const collection = database.collection("water_info")
     const data = await collection.find({}).toArray()
     // console.log(data)
     client.close()
