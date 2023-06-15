@@ -9,6 +9,20 @@ const url = "mongodb://sanslab1.ddns.net:27017/"
  * to have JSONEncoder in Javascript code to encode and decode.
  */
 
+app.get('/get/allsensors', async (req, res) => {
+
+    const client = await MongoClient
+        .connect(url, { useNewUrlParser: true })
+        .catch(err => { console.log(err); })
+    const database = client.db("admin")
+    const collection = database.collection("devices")
+    const data = await collection.find({}).toArray()
+    // console.log(data)
+    client.close()
+
+    res.send({ data: data })
+})
+
 app.get('/get/sensors', async (req, res) => {
 
     const client = await MongoClient
@@ -16,6 +30,20 @@ app.get('/get/sensors', async (req, res) => {
         .catch(err => { console.log(err); })
     const database = client.db("devices")
     const collection = database.collection("water_info")
+    const data = await collection.find({}).toArray()
+    // console.log(data)
+    client.close()
+
+    res.send({ data: data })
+})
+
+app.get('/get/sensors2', async (req, res) => {
+
+    const client = await MongoClient
+        .connect(url, { useNewUrlParser: true })
+        .catch(err => { console.log(err); })
+    const database = client.db("devices")
+    const collection = database.collection("water_info2")
     const data = await collection.find({}).toArray()
     // console.log(data)
     client.close()

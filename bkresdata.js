@@ -57,11 +57,11 @@ const getdata = (data) => {
     try {
         const database = client.db("admin")
         const collection = database.collection('devices')
-        const data = await collection.findOne({ "device_id": "BKRES_test" })
+        const data = await collection.findOne({ "device_id": "BKRES_sensor" })
         const i = getdata(data)
 
         const database2 = client.db("devices")
-        const collection2 = database2.collection('BKRES_water')
+        const collection2 = database2.collection('water_info')
         const res = await collection2.insertMany(i);
         console.log("done")
     } catch (err) {
