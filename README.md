@@ -5,7 +5,7 @@ To run Javascript (Node.js) version code, you need to install Node.js in your co
 Where to install:
 
 ### testmongo.js
-To run testmongo.js, you need to install `mongo` driver (like pymongo) in your computer. 
+To run bkresdata.js, you need to install `mongo` driver (like pymongo) in your computer. 
 
 Instruction for installing mongodb package of Node.js:
 
@@ -16,7 +16,7 @@ $ npm install mongodb
 
 To run code with Node.js:
 ```shell
-$ node testmongo.js
+$ node bkresdata.js
 ```
 
 ### api.js
@@ -36,4 +36,4 @@ $ node api.js
 
 then you can open your browner and access url `localhost:3000/../..` to check the result.
 ex: following http://localhost:3000/get/allsensors to get allsensors 
- or http://localhost:3000/get/sensors to get first sensors
+ or http://localhost:3000/get/BKRES_sensor to get first sensors

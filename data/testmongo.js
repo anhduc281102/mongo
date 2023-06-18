@@ -60,7 +60,7 @@ const getdata = (data) => {
         const i = getdata(data)
 
         const database2 = client.db("devices")
-        const collection2 = database2.collection('water_info2')
+        const collection2 = database2.collection('BKRES_test')
         const res = await collection2.insertMany(i);
         console.log("done")
     } catch (err) {

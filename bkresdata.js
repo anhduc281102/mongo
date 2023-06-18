@@ -31,7 +31,7 @@ const getdata = (data) => {
         if (m_data.length < 10)
             continue
         // console.log(m_data) 
-        let m_time = m.time
+        // let m_time = m.time
         results.push({
             Date: m_data[0] + '/' + m_data[1] + '/' +m_data[2],
             Time:m_data[3]+ ':' +m_data[4]+ ':' +m_data[5],   
@@ -39,7 +39,7 @@ const getdata = (data) => {
             pH: m_data[7],
             DO: m_data[8],
             EC: m_data[9],
-            time_to_sever: m_time
+            // time_to_sever: m_time
         })
     }
     return results
@@ -61,7 +61,7 @@ const getdata = (data) => {
         const i = getdata(data)
 
         const database2 = client.db("devices")
-        const collection2 = database2.collection('water_info')
+        const collection2 = database2.collection('BKRES_sensor')
         const res = await collection2.insertMany(i);
         console.log("done")
     } catch (err) {
