@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient
-const url = "mongodb://sanslab1.ddns.net:27017/"
+const url = "mongodb://admin_sanslab:sanslab@sanslab1.ddns.net:27017/"
 
 const checkdata = (ele) => {
     // new check after translation

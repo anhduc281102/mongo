@@ -2,7 +2,7 @@ const MongoClient = require('mongodb').MongoClient
 const express = require('express')
 const app = express()
 const port = 3000
-const url = "mongodb://sanslab1.ddns.net:27017/"
+const url = "mongodb://admin_sanslab:sanslab@sanslab1.ddns.net:27017/"
 /**
  * Since JSON is Javascript Object Notation, it is not neccessary 
  * to have JSONEncoder in Javascript code to encode and decode.
@@ -24,7 +24,7 @@ app.get('/get/allsensors', async (req, res) => {
     res.send({ data: data })
 })
 
-app.get('/get/BKRES_sensor', async (req, res) => {
+app.get('/get/okoTOJlX', async (req, res) => {
 
     const client = await MongoClient
         .connect(url, { useNewUrlParser: true })

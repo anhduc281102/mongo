@@ -36,4 +36,4 @@ $ node api.js
 
 then you can open your browner and access url `localhost:3000/../..` to check the result.
 ex: following http://localhost:3000/get/allsensors to get allsensors 
- or http://localhost:3000/get/BKRES_sensor to get first sensors
+ or http://localhost:3000/get/okoTOJlX to get first sensors
